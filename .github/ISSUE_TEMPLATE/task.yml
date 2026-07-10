@@ -1,0 +1,51 @@
+name: Task
+description: Create a new task to be picked up and tracked on the project board
+title: "[Task]: "
+labels: ["task"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to be done? Include relevant context.
+      placeholder: Describe the task clearly enough that someone unfamiliar with it can pick it up.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What does "done" look like for this task?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: input
+    id: branch
+    attributes:
+      label: Suggested branch name
+      description: Optional — a suggested name for the branch this work should happen on (e.g. feature/issue-xxx-short-desc)
+      placeholder: feature/issue-xxx-short-desc
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        Once created, this issue should be added to the [project board](https://github.com/orgs/Cerify-Systems/projects/3) and assigned before work begins. See [CONTRIBUTING.md](https://github.com/Cerify-Systems/.github/blob/main/CONTRIBUTING.md) for the full workflow.
