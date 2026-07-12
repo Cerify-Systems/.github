@@ -40,8 +40,9 @@ Resolve any conflicts locally and push the updated branch to your fork.
 
 ## 5. Review and merge
 
+- **Update the project board:** As soon as you open a pull request, move the corresponding issue to the **"In Review"** column on the project board (do not mark it as closed/done yet).
 - Address review feedback with additional commits to the same branch.
-- Once approved, a reviewer will merge the pull request.
+- Once approved, a reviewer will merge the pull request, which will automatically close the issue and mark it as done.
 - Only the reviewers listed above have merge permissions; contributors should not attempt to merge their own PRs.
 
 ## Questions?
