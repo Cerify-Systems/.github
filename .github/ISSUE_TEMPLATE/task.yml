@@ -1,6 +1,5 @@
 name: Task
 description: Create a new task to be picked up and tracked on the project board
-title: ""
 labels: ["task"]
 body:
   - type: textarea
