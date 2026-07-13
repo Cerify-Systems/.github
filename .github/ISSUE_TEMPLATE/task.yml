@@ -10,18 +10,22 @@ body:
       placeholder: Describe the task clearly enough that someone unfamiliar with it can pick it up.
     validations:
       required: true
-
-  - type: textarea
+  - type: checkboxes
     id: acceptance-criteria
     attributes:
       label: Acceptance Criteria
-      description: What does "done" look like for this task?
-      placeholder: |
-        - [ ] Criterion 1
-        - [ ] Criterion 2
-    validations:
-      required: false
-
+      description: Select the criteria that must be met for this task to be considered done. Add any task-specific criteria not covered here in the Description above.
+      options:
+        - label: Functionality works as described and matches requirements
+          required: false
+        - label: Code has been tested locally
+          required: false
+        - label: No regressions introduced in existing features
+          required: false
+        - label: Documentation updated (if applicable)
+          required: false
+        - label: Reviewed and approved by an assigned reviewer
+          required: false
   - type: dropdown
     id: priority
     attributes:
@@ -33,7 +37,6 @@ body:
         - Critical
     validations:
       required: true
-
   - type: input
     id: branch
     attributes:
@@ -42,9 +45,9 @@ body:
       placeholder: feature/issue-xxx-short-desc
     validations:
       required: false
-
   - type: markdown
     attributes:
       value: |
         ---
         Once created, this issue should be added to the [project board](https://github.com/orgs/Cerify-Systems/projects/3) and assigned before work begins. See [CONTRIBUTING.md](https://github.com/Cerify-Systems/.github/blob/main/CONTRIBUTING.md) for the full workflow.
+        
